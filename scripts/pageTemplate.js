@@ -1,4 +1,4 @@
-import { handleError } from "./errorHandler"
+import { handleError } from "./errorHandler.js"
 
 function emitTemplateSucess(data) {
     const event = new CustomEvent('templateLoaded', {
