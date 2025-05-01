@@ -14,10 +14,9 @@ class PageTemplateManager {
 
         const div = document.createElement('div')
         div.class = "center"
-
         div.appendChild(canvas)
 
-        this.canvas = element
+        this.canvas = canvas
 
         document.body.appendChild(div)
     }
