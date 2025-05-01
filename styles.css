@@ -1,13 +1,17 @@
 body {
-    background-color: rgb(35,35,35);
+    background-color: rgb(35, 35, 35);
 }
 
 .center {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 75vh;
 }
 
 #maincanvas {
-    background-color: rgb(241,241,241);
+    background-color: rgb(241, 241, 241);
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;
 }
