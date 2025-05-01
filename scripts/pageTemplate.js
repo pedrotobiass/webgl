@@ -7,14 +7,19 @@ class PageTemplateManager {
     }
 
     createCanvas() {
-        const element = document.createElement('canvas')
-        element.width = 512
-        element.height = 512
-        element.id = "maincanvas"
+        const canvas = document.createElement('canvas')
+        canvas.width = 512
+        canvas.height = 512
+        canvas.id = "maincanvas"
 
-        document.body.appendChild(element)
+        const div = document.createElement('div')
+        div.class = "center"
+
+        div.appendChild(canvas)
 
         this.canvas = element
+
+        document.body.appendChild(div)
     }
 
     createStyles() {

@@ -2,7 +2,12 @@ body {
     background-color: rgb(35,35,35);
 }
 
+#center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #maincanvas {
     background-color: rgb(241,241,241);
 }
-
