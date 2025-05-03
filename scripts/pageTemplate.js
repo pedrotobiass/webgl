@@ -36,11 +36,11 @@ class PageTemplateManager {
     }
 
     emitTemplateLoaded() {
-        const event = new CustomEvent("templateLoaded", {
-            gl: this.gl,
-        });
+        const event = new CustomEvent("templateLoaded", {});
 
         document.dispatchEvent(event);
+
+        globalThis.gl = this.gl
     }
 }
 
