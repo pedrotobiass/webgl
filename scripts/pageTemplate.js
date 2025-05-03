@@ -1,9 +1,12 @@
 import { handleError } from "./errorHandler.js";
+import { DebugManager } from "./debug.js";
 
 class PageTemplateManager {
     construtor() {
         this.canvas = null
         this.gl = null
+
+        debugManager.debug("Instantiated template")
     }
 
     createCanvas() {
@@ -20,6 +23,8 @@ class PageTemplateManager {
         this.canvas = canvas
 
         document.body.appendChild(div)
+
+        debugManager.debug('Created canvas')
     }
 
     createStyles() {
@@ -28,11 +33,15 @@ class PageTemplateManager {
         element.href = "./styles.css"
 
         document.head.appendChild(element)
+
+        debugManager.debug('Loaded styles')
     }
 
     createGL() {
         const gl = this.canvas.getContext('webgl2')
         this.gl = gl
+
+        debugManager.debug('Loaded Graphics Library webgl2')
     }
 
     emitTemplateLoaded() {
@@ -41,10 +50,14 @@ class PageTemplateManager {
         document.dispatchEvent(event);
 
         globalThis.gl = this.gl
+
+        debugManager.debug('loaded template')
     }
 }
 
 async function main() {
+    globalThis.debugManager = new DebugManager()
+
     const manager = new PageTemplateManager()
     manager.createCanvas()
     manager.createStyles()
