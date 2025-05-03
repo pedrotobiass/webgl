@@ -12,7 +12,7 @@ export class DebugManager {
     }
 
     appendBody() {
-        document.body.appendBody(this.parentElement)
+        document.body.appendChild(this.parentElement)
     }
 
     debug(info, id) {
