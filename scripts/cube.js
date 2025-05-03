@@ -33,6 +33,7 @@ async function main(gl) {
 }
 
 try {
+    
     if (!globalThis.gl) {
         document.addEventListener("templateLoaded", async () => {
             await main(gl);
